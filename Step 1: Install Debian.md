@@ -1,6 +1,7 @@
 ### Installing Debian
 
-Downloaded the netinst ISO file from Debian website: https://www.debian.org/download 
+## 1. Installation
+- Downloaded the netinst ISO file from Debian website: https://www.debian.org/download 
 
 Flash ISO to USB drive using BalenaEtcher
 
