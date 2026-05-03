@@ -9,6 +9,7 @@ Install Pi-hole and Suricata on an HP EliteDesk, installed in-line between modem
 
 ### Hardware:
 HP EliteDesk
+
 Usb -> Ethernet adapter
 
 ### Software:
