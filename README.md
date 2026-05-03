@@ -13,4 +13,4 @@ HP EliteDesk
 Usb -> Ethernet adapter
 
 ### Software:
-
+Debian 13  https://www.debian.org/download 
