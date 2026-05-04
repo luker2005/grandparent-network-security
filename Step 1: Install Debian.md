@@ -21,6 +21,7 @@
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
 -**Remove desktop environments**
   - sudo apt remove --purge gnome* gdm3 -y
+      - *may need to reboot after this*
   - sudo apt autoremove --purge -y
   - sudo apt autoclean
 
