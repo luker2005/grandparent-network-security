@@ -46,3 +46,7 @@
   - ip a | *shows network interfaces*
   - sudo ip link set eno1 up | *eno1 is the interface name, this command sets it to up*
   - sudo networkctl up eno1 | *configures interface*
+  - sudo systemctl restart systemd-networkd
+  - ping 8.8.8.8 | *this failed so I had to check the network config*
+
+
