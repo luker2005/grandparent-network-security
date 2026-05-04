@@ -30,7 +30,10 @@
   - sudo systemctl status sshd
     - *not found, install using following steps*
 -**Install SSH**
-
+  - sudo apt install openssh-server -y
+  - sudo systemctl enable ssh
+  - sudo systemctl start ssh
+  - sudo systemctl status sshd | *this confirms it is running*
 
 
 
