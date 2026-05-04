@@ -15,6 +15,8 @@
 
 ## 2. Hardening
 - sudo apt update && sudo apt upgrade -y
+- sudo passwd -l root | *this locks the root account*
+
 
 
 ## Issues
