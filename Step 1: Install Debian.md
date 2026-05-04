@@ -37,4 +37,12 @@
 
 
 
-### sudo apt update && sudo apt upgrade not working. rmeoving gnome must have messed something up.
+### sudo apt update && sudo apt upgrade not working. removing gnome must have messed something up.
+-**Check for connectivity**
+  - ping 8.8.8.8
+  - *Network is unreachable*
+
+-**Bring interface back online**
+  - ip a | *shows network interfaces*
+  - sudo ip link set eno1 up | *eno1 is the interface name, this command sets it to up*
+  - sudo networkctl up eno1 | *configures interface*
