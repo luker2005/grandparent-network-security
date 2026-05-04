@@ -24,6 +24,7 @@
       - *may need to reboot after this*
   - sudo apt autoremove --purge -y
   - sudo apt autoclean
+  - sudo reboot
 
 -**Check for SSH**
   - sudo systemctl status sshd
