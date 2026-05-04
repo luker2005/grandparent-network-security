@@ -14,7 +14,7 @@
 - leave http proxy blank, *not using a proxy server so not needed*
 
 ## 2. Hardening
-- 
+- sudo apt update && sudo apt upgrade -y
 
 
 ## Issues
@@ -28,3 +28,13 @@
 
 -**Check for SSH**
   - sudo systemctl status sshd
+    - *not found, install using following steps*
+-**Install SSH**
+
+
+
+
+
+
+
+### sudo apt update && sudo apt upgrade not working. rmeoving gnome must have messed something up.
