@@ -18,3 +18,4 @@
 
 
 ## Issues
+Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
