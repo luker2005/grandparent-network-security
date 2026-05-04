@@ -36,10 +36,6 @@
   - sudo systemctl status sshd | *this confirms it is running*
 
 
-
-
-
-
 ### sudo apt update && sudo apt upgrade not working. removing gnome must have messed something up.
 -**Check for connectivity**
   - ping 8.8.8.8
@@ -62,3 +58,9 @@
        iface eno1 inet dhcp
      - Ctrl +, Ctrl + X
   - sudo systemctl restart networking
+
+### SSH host key conflict
+  *this server was previously used with a different OS and user. when logging in via SSH it requests the password for a user that does not exist*
+  -**Remove old SSH key**
+    - ssh-keygen -R 192.168.x.x
+    
