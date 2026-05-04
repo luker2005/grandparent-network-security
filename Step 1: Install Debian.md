@@ -49,4 +49,13 @@
   - sudo systemctl restart systemd-networkd
   - ping 8.8.8.8 | *this failed so I had to check the network config*
 
-
+-**Fix network config file**
+  - cat /etc/network/interface | *This is to check what is written in the file*
+      - *Missing the ethernet interface*
+  - sudo nano /etc/network/interfaces
+     - Add these lines:
+       .# The primary network interface | dont add the period, i just put it there so it wouldnt turn that into a header in this doc
+       auto eno1
+       iface eno1 inet dhcp
+     - Ctrl +, Ctrl + X
+  - sudo systemctl restart networking
