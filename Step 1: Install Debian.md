@@ -60,7 +60,7 @@
   - sudo systemctl restart networking
 
 ### SSH host key conflict  
-*this server was previously used with a different OS and user. when logging in via SSH it requests the password for a user that does not exist*
-  -**Remove old SSH key**
-    - ssh-keygen -R 192.168.x.x
+*this server was previously used with a different OS and user. when logging in via SSH it requests the password for a user that does not exist*  
+-**Remove old SSH key**  
+  - ssh-keygen -R 192.168.x.x  
     
