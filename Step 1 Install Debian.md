@@ -31,8 +31,10 @@
 - *disabling password authentication* | sudo nano /etc/ssh/sshd_config -> PasswordAuthenitcation no
 - sudo systemctl restart sshd 
 
-
-
+**UFW firewall config**
+- sudo apt install ufw -y
+- sudo ufw allow OpenSSH | *This prevents losing ssh access when turning on UFW*
+- 
 
 ## Issues
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
