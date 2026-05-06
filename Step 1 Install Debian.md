@@ -28,6 +28,8 @@
 - mkdir -p ~/.ssh && chmod 700 ~/.ssh | *create directory for ssh keys*
 - nano ~/.ssh/authorized_keys | *paste the key here* | run type $env:USERPROFILE\.ssh\id_ed25519.pub in powershell to find public key*
 - chmod 600 ~/.ssh/authorized_keys
+- *disabling password authentication* | sudo nano /etc/ssh/sshd_config -> PasswordAuthenitcation no
+- sudo systemctl restart sshd 
 
 
 
