@@ -17,14 +17,17 @@
 - sudo apt update && sudo apt upgrade -y
 - sudo passwd -l root | *this locks the root account*
 **SSH config Hardening**
--sudo nano /etc/ssh/sshd_config
+- sudo nano /etc/ssh/sshd_config
 	*change these settings*
 	PermitRootLogin no
 	X11Forwarding no | *unnecessary*
 	MaxAuthTries 3
 	
--ssh-keygen -t ed25519 -C "IDS key" | *this is done on the computer being used to ssh into server*
--ssh-copy-id ussername@192.168.x.x  | *do this on server*
+- ssh-keygen -t ed25519 -C "IDS key" | *this is done on the computer being used to ssh into server*
+- ls -l ~/.ssh/id* | *do this on server to verify there are no ssh keys already*
+- mkdir -p ~/.ssh && chmod 700 ~/.ssh | *create directory for ssh keys*
+- nano ~/.ssh/authorized_keys | *paste the key here* | run type $env:USERPROFILE\.ssh\id_ed25519.pub in powershell to find public key*
+- chmod 600 ~/.ssh/authorized_keys
 
 
 
