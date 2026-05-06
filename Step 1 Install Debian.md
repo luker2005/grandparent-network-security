@@ -16,6 +16,16 @@
 ## 2. Hardening
 - sudo apt update && sudo apt upgrade -y
 - sudo passwd -l root | *this locks the root account*
+**SSH config Hardening**
+-sudo nano /etc/ssh/sshd_config
+	*change these settings*
+	PermitRootLogin no
+	X11Forwarding no | *unnecessary*
+	MaxAuthTries 3
+	
+-ssh-keygen -t ed25519 -C "IDS key" | *this is done on the computer being used to ssh into server*
+-ssh-copy-id ussername@192.168.x.x  | *do this on server*
+
 
 
 
