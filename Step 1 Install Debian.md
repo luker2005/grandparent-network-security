@@ -19,9 +19,9 @@
 **SSH config Hardening**
 - sudo nano /etc/ssh/sshd_config
 	*change these settings*
-	PermitRootLogin no
-	X11Forwarding no | *unnecessary*
-	MaxAuthTries 3
+	- PermitRootLogin no
+	- X11Forwarding no | *unnecessary*
+	- MaxAuthTries 3
 	
 - ssh-keygen -t ed25519 -C "IDS key" | *this is done on the computer being used to ssh into server*
 - ls -l ~/.ssh/id* | *do this on server to verify there are no ssh keys already*
@@ -41,7 +41,24 @@
 - sudo ufw allow 80/tcp | *pi-hole web dashboard*
 
 - sudo ufw show added | *verify all rules have been added*
-- sudo ufw enable | 
+- sudo ufw enable
+
+**Fail2Ban Setup**
+- sudo apt install fail2ban -y | *install fail2ban*
+- sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local | *ensures settings will persist through package updates*
+- sudo nano /etc/fail2ban/jail.local
+	*set these values:*
+	- bantime  = 1h
+	- findtime  = 10m
+	- maxretry = 3
+- sudo systemctl enable fail2ban 
+- sudo systemctl start fail2ban 
+- sudo fail2ban-client status sshd
+
+**Automatic security updates**
+- 
+
+
 
 ## Issues
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
