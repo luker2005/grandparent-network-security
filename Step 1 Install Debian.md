@@ -33,8 +33,15 @@
 
 **UFW firewall config**
 - sudo apt install ufw -y
+
 - sudo ufw allow OpenSSH | *This prevents losing ssh access when turning on UFW*
-- 
+- sudo ufw allow ssh 
+- sudo ufw allow 53/tcp | *this will be used for pi-hole*
+- sudo ufw allow 53/udp | *used for pi-hole*
+- sudo ufw allow 80/tcp | *pi-hole web dashboard*
+
+- sudo ufw show added | *verify all rules have been added*
+- sudo ufw enable | 
 
 ## Issues
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
