@@ -76,6 +76,7 @@
 	- netmask 255.255.255.0
 	- gateway 192.168.x.1
 	- dns-nameservers 8.8.8.8
+	- 
 
 ## Issues
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
