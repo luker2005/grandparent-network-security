@@ -59,15 +59,23 @@
 - sudo apt install unattended-upgrades -y | *this package automatically insatalls security updates*
 - sudo dpkg-reconfigure unattended-upgrades | *runs the setup wizard*
 - sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
-	-**uncomment these lines**
+	-*uncomment these lines*
 		Unattended-Upgrade::Origins-Pattern {
     "origin=Debian,codename=${distro_codename},label=Debian-Security";
 };
 
 		Unattended-Upgrade::Remove-Unused-Dependencies "true";
 		
-- 
+- sudo systemctl enable unattended-upgrades
+- sudo systemctl start unattended-upgrades
 
+**Static IP config**
+- sudo nano /etc/network/interfaces 
+	- change dhcp to Static
+	- address 192.168.x.x
+	- netmask 255.255.255.0
+	- gateway 192.168.x.1
+	- dns-nameservers 8.8.8.8
 
 ## Issues
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
