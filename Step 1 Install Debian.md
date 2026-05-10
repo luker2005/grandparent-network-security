@@ -56,8 +56,17 @@
 - sudo fail2ban-client status sshd
 
 **Automatic security updates**
-- 
+- sudo apt install unattended-upgrades -y | *this package automatically insatalls security updates*
+- sudo dpkg-reconfigure unattended-upgrades | *runs the setup wizard*
+- sudo nano /etc/apt/apt.conf.d/50unattended-upgrades
+	-**uncomment these lines**
+		Unattended-Upgrade::Origins-Pattern {
+    "origin=Debian,codename=${distro_codename},label=Debian-Security";
+};
 
+		Unattended-Upgrade::Remove-Unused-Dependencies "true";
+		
+- 
 
 
 ## Issues
