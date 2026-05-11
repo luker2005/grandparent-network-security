@@ -76,7 +76,11 @@
 	- netmask 255.255.255.0
 	- gateway 192.168.x.1
 	- dns-nameservers 8.8.8.8
-	- 
+
+**Tailscale**
+- curl -fsSL https://tailscale.com/install.sh | sh | *ensure curl is installed, i didnt have it*
+- sudo tailscale up
+- *go to website and make an account, add main pc, click link on server then add to tailnet*
 
 ## Issues
 ### Accidentally installed gnome and debian desktop environment, may have missed installing ssh and standard system utilities.
