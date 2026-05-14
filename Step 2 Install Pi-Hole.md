@@ -11,6 +11,11 @@
 ## Configuration
 - sudo usermod -aG pihole www-data | *run this so that lists can be added from the web interface*
 - *in web interface add the blocklists listed below* 
+- sudo pihole -g
+
+## Testing
+- nslookup doubleclick.net 192.168.x.x | *run on main pc to test it is blocking*
+- check dashboard to see if pihole is registering queries
 
 **Blocklists**
 - https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt
