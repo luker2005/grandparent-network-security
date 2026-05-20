@@ -16,6 +16,10 @@
 - sudo suricata-update | *installs rules*
 - sudo systemctl restart suricata
 
+## Adding Rulesets
+- sudo suricata-update enable-source ptresearch/attackdetection | *repeat with rulesets listed below*
+- 
+
 
 
 
