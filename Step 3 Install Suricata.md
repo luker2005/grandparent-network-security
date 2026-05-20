@@ -16,3 +16,14 @@
 - sudo suricata-update | *installs rules*
 - sudo systemctl restart suricata
 
+
+
+
+
+
+# Issues
+
+**DNS Can't resolve to test suricata**
+*When trying to use http://testmynids.org to test suricata rules, I recieve a curl code 6. when testing with nslookup I get SERVFAIL reply from quad100.*
+*Tailscale MagicDNS is overriding interface configurations*
+- sudo tailscale set --accept-dns=false | *disables magicdns*
